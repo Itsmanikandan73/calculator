@@ -2,10 +2,15 @@
 
 A simple CLI based calculator written in C.
 
-## How to Use it 
+## Installation & Setup
 
-if you haven't installed gcc do this steps first --- sudo apt-get update or sudo apt-get update && upgrade -y
+Before you start, make sure you have the GCC compiler installed. On Linux (or WSL), run:
 
-- sudo apt-get install gcc
+- sudo apt update && sudo apt upgrade -y
+- sudo apt intsatll gcc -y
+
+## Runnig the code
+To compile and excute any program follow this steps:
+
 - gcc calculator.c -o calculator
 - ./calculator
