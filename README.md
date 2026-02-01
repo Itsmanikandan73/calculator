@@ -4,7 +4,7 @@ A simple CLI-based calculator written in C, now with fuction pointers for operat
 
 # Features 
   - Supports addition (+), subtraction (-), mulitiplication (*), and division (/)
-  - Uses fuction pointers for modular operation handling.
+  - Uses function pointers for modular operation handling.
   - Handles division by zero errors.
   - Improved input validation.
 
