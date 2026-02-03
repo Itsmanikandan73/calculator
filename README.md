@@ -1,12 +1,12 @@
 # Calculator in C
 
-A simple CLI-based calculator written in C, now with fuction pointers for operations
+A simple CLI-based calculator written in C, using function pointers for operations.
 
 # Features 
   - Supports addition (+), subtraction (-), mulitiplication (*), and division (/)
-  - Uses function pointers for modular operation handling.
+  - Uses **function pointers** for modular operation handling.
   - Handles division by zero errors.
-  - Improved input validation.
+  - Uses **double** precision for better calculation accuracy.
 
 ## Installation & Setup
 
@@ -30,4 +30,4 @@ Result: 8.70
 - **Version 1.0**(current): Basic calculator with numeric choices and float.
 
 ## About
-This project demostrates basic C programming with switch cases and pointers.
+This project demostrates basic C programming with switch cases,pointers,amd floating-point handling.
