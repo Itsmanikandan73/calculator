@@ -1,31 +1,54 @@
 #include <stdio.h>
 
+//declearing functions 
+double add(double a, double b);
+double subtract(double a, double b);
+double multiply(double a, double b);
+double divide(double a, double b);
+
 int main(){
 
-    char choices;
-    float x, y, result;
+    char choice;
+    double a,b, result;
+    double(*operation)(double, double);    //pointer variable name is *operation 
 
-    printf("Please enter choice using numbers\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division \n");
-    scanf("%s", &choices);
+    puts("Enter the operator(1: +, 2: -, 3: *, 4: /): ");
+    scanf("%c", &choice);
 
-    printf("\nPlease enter two numbers: \n");
-    scanf("%f %f", &x, &y);
+    puts("Enter two numbers");
+    scanf("%lf %lf", &a, &b);
 
-    switch(choices){
-        case '1':
-            result = x + y;
+    switch(choice){
+        case '+':
+            operation = add;
             break;
-        case '2':
-            result = x - y;
+        case '-':
+            operation = subtract;
             break;
-        case '3':
-            result = x * y;
+        case '*':
+            operation = multiply;
             break;
-        case '4':
-            result = x / y;
+        case '/':
+            operation = divide;
             break;
         default:
-            printf("\nYou entered Invalid format\n");
+            puts("Invalid Operator");
+            return 1;
     }
-    printf("\nThe Result: %.2f\n", result);
+
+    result = operation(a, b);    // get answer from pointer
+    printf("\nResult: %.2f\n", result);
+
+    return 0;
+}
+
+double add(double a, double b){ return a + b;}
+double subtract(double a, double b){ return a - b;}
+double multiply(double a, double b){ return a * b;}
+double divide(double a, double b){
+    if (b == 0){
+        puts("Error: Division by zero!");
+        return 0;
+    }
+    return a / b;
 }
