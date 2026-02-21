@@ -12,11 +12,11 @@ int main(){
     double a,b, result;
     double(*operation)(double, double);    //pointer variable name is *operation 
 
-    puts("Enter the operator(1: +, 2: -, 3: *, 4: /): ");
-    scanf("%c", &choice);
+    fputs("Enter the operator[0x1: +, 0x2: -, 0x3: *, 0x4: /]: \n", stdout);
+    fscanf(stdin,"%c", &choice);
 
-    puts("Enter two numbers");
-    scanf("%lf %lf", &a, &b);
+    fputs("Enter two numbers\n", stdout);
+    fscanf(stdin,"%lf %lf", &a, &b);
 
     switch(choice){
         case '+':
@@ -32,7 +32,7 @@ int main(){
             operation = divide;
             break;
         default:
-            puts("Invalid Operator");
+            fputs("Error: Invalid Operator\n", stderr);
             return 1;
     }
 
@@ -47,7 +47,7 @@ double subtract(double a, double b){ return a - b;}
 double multiply(double a, double b){ return a * b;}
 double divide(double a, double b){
     if (b == 0){
-        puts("Error: Division by zero!");
+        fputs("Error: Division by zero!\n", stderr);
         return 0;
     }
     return a / b;
