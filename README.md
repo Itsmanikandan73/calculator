@@ -58,11 +58,14 @@ Enter two numbers: 7.5 4.2
 Result: 31.50
 ```
 # Project Structure
+```
 calculator/
 ├── src/
 |    └── calculator.c     # Main source code
 |    ├── operations.s
 └── README.md
+```
+This README.md file is Written by AI
 
 
 
