@@ -12,11 +12,11 @@ int main() {
 	double a,b,result;
 	double (*operation)(double, double);
 
-	printf("Enter operator [+, -, *, /]: ");
-	scanf(" %c", &choice);
+	fprintf(stdout,"Enter operator [+, -, *, /]: ");
+	fscanf(stdin," %c", &choice);
 
-	printf("Enter two numbers: ");
-	scanf("%lf %lf", &a, &b);
+	fprintf(stdout,"Enter two numbers: ");
+	fscanf(stdin,"%lf %lf", &a, &b);
 
 	switch(choice) {
 		case '+': 
@@ -32,11 +32,12 @@ int main() {
 			operation = divide;
 			break;
 		default:
-			printf("Error: Invalid operator\n");
+			fprintf(stderr,"Error: Invalid operator\n");
 			return 1;
 	}
 
 	result = operation(a,b);
-	printf("\nResult: %.2f\n", result);
+	fprintf(stdout,"\nResult:%.2f\n", result);
+
 	return 0;
 }
