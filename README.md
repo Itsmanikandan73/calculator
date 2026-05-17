@@ -36,4 +36,33 @@ sudo apt update
 sudo apt install gcc nasm -y
 ```
 # Build & Run
+```# Clone the repo
+git clone https://github.com/Itsmanikandan73/calculator.git
+cd calculator
+
+# Assemble the ASM file
+nasm -f elf64 operations.asm -o operations.o
+
+# Compile and link
+gcc calculator.c operations.o -o calculator -no-pie
+
+# Run
+./calculator
 ```
+
+# Usage Example
+```
+Enter operator [+, -, *, /]: *
+Enter two numbers: 7.5 4.2
+
+Result: 31.50
+```
+# Project Structure
+calculator/
+├── src/
+|    └── calculator.c     # Main source code
+|    ├── operations.s
+└── README.md
+
+
+
